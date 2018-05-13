@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Bienvenido {{nombre}} {{apellido}}</h2>
+  <button ion-button round [disabled]="crearDeshab" (click)="crear()">Crear Perfil</button>
+  <br>
+  <button ion-button round [disabled]="editarDeshab" (click)="editar()">Editar Perfil</button>
+  <br>
+  <button ion-button round [disabled]="editarDeshab" (click)="buscar()">Buscar ayuda</button>
+  <br>
+  <button ion-button round [disabled]="editarDeshab" (click)="ayudar()">Ofrecer ayuda</button>
+  <br>
+  <button ion-button round [disabled]="editarDeshab" (click)="leer()">Leer mensajes</button>
+  <br>
+  <button ion-button round [disabled]="editarDeshab" (click)="contactos()">Ver contactos</button>
+  <br>
+  <button ion-button round (click)="salir()">Salir</button>
+</ion-content>

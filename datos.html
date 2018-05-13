@@ -1,0 +1,26 @@
+<html>
+   <head>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+      <script type = "text/javascript" src = "datos.js"></script>
+   </head>
+	
+      <body>
+        <script>
+        var carrerasRef=firebase.database().ref("carreras/");
+            carrerasRef.push({'id':1,'carrera':'Sistemas'});
+            carrerasRef.push({'id':2,'carrera':'Medicina'});
+            carrerasRef.push({'id':3,'carrera':'Derecho '});
+            carrerasRef.push({'id':4,'carrera':'Psicologia'});
+            carrerasRef.push({'id':5,'carrera':'Empresas'});
+        var asignaturasRef=firebase.database().ref("asignaturas/");
+            asignaturasRef.push({'id':1,'asignatura':'MM-110 Matematica I'});
+            asignaturasRef.push({'id':2,'asignatura':'MM-111 Geometria y trigonometria'});
+            asignaturasRef.push({'id':3,'asignatura':'MM-201 Calculo I'});
+            asignaturasRef.push({'id':4,'asignatura':'MM-420 Matematica discreta'});
+            asignaturasRef.push({'id':5,'asignatura':'IN-101 Ingles I'});
+            asignaturasRef.push({'id':6,'asignatura':'IN-102 Ingles II'});
+            asignaturasRef.push({'id':6,'asignatura':'IN-103 Ingles III'});
+        </script>
+        
+      </body>
+</html>

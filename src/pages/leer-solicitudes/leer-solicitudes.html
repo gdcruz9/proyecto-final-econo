@@ -1,0 +1,32 @@
+<!--
+  Generated template for the LeerSolicitudesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Leer mensajes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+<ion-card ion-item *ngFor="let msg of mensajes;let i = index">
+ 
+    <ion-card-header>
+      Resultado
+    </ion-card-header> 
+  
+    <ion-card-content>
+        <button ion-button (click)='responder(msg.id)' icon-left><ion-icon name="chatbubbles"></ion-icon>Responder a este usuario</button>
+      <!-- Add card content here! -->
+      <br>
+      <ion-icon name="person"></ion-icon>  {{ msg.nombre }} {{ msg.apellido }}
+      <br>
+      <ion-icon name="mail"></ion-icon>  {{ msg.mensaje}}
+    </ion-card-content>
+  
+  </ion-card>
+</ion-content>

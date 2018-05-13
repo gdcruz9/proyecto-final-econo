@@ -1,0 +1,60 @@
+<!--
+  Generated template for the BuscarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Buscar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h2>Seleccione la asignatura para la cual necesita ayuda:</h2>
+    <ion-list>
+        <ion-item>
+          <ion-label>Asignatura:</ion-label>
+          <ion-select [(ngModel)]="asig">
+            <ion-option *ngFor="let a of asignaturas;index as i" value="{{i}}">{{a}}</ion-option>
+          </ion-select>
+        </ion-item>
+    </ion-list>
+    <button ion-button (click)="buscar()">Buscar</button>
+    <br> 
+    <ion-card ion-item *ngFor="let tutor of tutoresAsig; let i = index">
+ 
+        <ion-card-header>
+          Resultado
+        </ion-card-header> 
+      
+        <ion-card-content>
+          <button ion-button  (click)='msg(i)' icon-left><ion-icon name="chatbubbles"></ion-icon> Enviar mensaje a este usuario</button>  
+          <br>
+          <button ion-button  (click)='contac(i)' icon-left><ion-icon name="contacts"></ion-icon> Agregar a libreta de contactos</button>  
+          <br>
+          <ion-icon name="person"></ion-icon>
+          <!-- Add card content here! -->
+          {{ tutor.nombre }}
+          {{ tutor.apellido }}
+          <br>
+          <ion-icon name="mail"></ion-icon>
+          email: {{ tutor.emailCont }}
+          <br>
+          <ion-icon name="call"></ion-icon>
+          telefono: {{ tutor.telefono }}
+          <br>
+          <ion-icon name="contacts"></ion-icon>
+          {{ tutor.genero }}
+          <br>
+          <ion-badge item-end icon-left><ion-icon name="ribbon"></ion-icon>{{tutor.reputacion}}</ion-badge>
+          <br>
+          <ion-icon name="paper"></ion-icon>
+          {{ tutor.descrip }}
+        </ion-card-content>
+      
+      </ion-card>
+</ion-content>
